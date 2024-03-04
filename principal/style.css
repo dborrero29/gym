@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all 0.3s;
+}
+
+.hidden {
+    display: none !important;
+}
+
+header {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(50, 50, 50, 0.65) 70%,rgba(200,200,200, 0.65)), url(—Pngtree—an\ old\ gym\ setting\ with_2667256.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 25px 8%;
+    color: #ddd;
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo{
+    width: 125px;
+    height: 150px;
+    cursor: pointer;
+}
+
+header nav ul {
+    list-style: none;
+    width: 100%;
+    text-align: right;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+.btn-contact {
+    background-color: rgb(255, 128, 0);
+    padding: 17px;
+    border-radius: 20px;
+}
+
+header nav ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+header nav ul li a:hover {
+    color: rgb(255, 128, 0);
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.btn-contact:hover {
+    background-color: rgb(201, 103, 4);
+    color: white;
+    padding: 20px;
+}
+
+.about {
+    margin-top: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about h1 {
+    font-size: 70px;
+    font-weight: 500;
+    line-height: 70px;
+    flex: 50%;
+}
+
+.about h1 span {
+    color: rgb(255, 128, 0);
+}
+
+.about p {
+    flex: 50%;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    padding-left: 70px;
+}
+
+#desplegable {
+    display: none;
+    font-size: 35px;
+    color: #ddd;
+}
+
+#desplegable:hover {
+    color: rgb(255, 128, 0);
+}
+
+@media screen and (max-width: 900px) {
+
+    .about {
+        display: block;
+    }
+
+    .about h1 {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .about p {
+        padding: 0;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    #desplegable {
+        display: flex;
+    }
+
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Overpass:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <img src="logo.png" class="logo">
+        <ul class="navegador">
+          <li><a class="btn-inicio" href="../principal/index.html">Main Page</a></li>
+          <li><a class="btn-contact" href="#contact">Contact</a></li>
+        </ul>
+        <button id="desplegable">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+      </nav>
+      <main>
+        <h1>Contact with us</h1>
+        <form action="">
+            <div id="nombre_tel">
+                <div>
+                    <p>Nombre completo</p>
+                    <input type="text" name="name" id="nombre">
+                </div>
+                <div>
+                    <p>Teléfono</p>
+                    <input type="text" name="telefono" id="telefono">
+                </div>
+            </div>
+            <div id="bloque-abajo">
+                <div>
+                    <div id="correo">
+                        <p>Correo electrónico</p>
+                        <input type="text" name="correo" id="correo">
+                    </div>
+                    <div id="comentarios">
+                        <p>Consulta</p>
+                        <textarea type="text" name="consulta" id="consulta"></textarea>
+                    </div>
+                </div>
+                <div id="informacion">
+                    <h2>Reasons to contact with us</h2>
+                    <p>You can contact with us if you have any doubts about something you saw in our web page. Also you can give us some feedback and make some suggestions to improve the information that we are showing</p>
+                </div>
+            </div>
+            <button type="submit" id="enviar">Enviar</button>
+        </form>
+      </main>
+      <footer>
+        <a id="copyright" href="">&copy; David Borrero</a>
+        <img src="logo.png" class="logo_footer">
+        <section id="enlaces">
+          <a href="header" id="begin">Go to beginning</a>
+          <a href="dobid2904@gmail.com" id="contact">Contact</a>
+        </section>
+      </footer>
+      <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+.hidden {
+    display: none !important;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s;
+
+    &:hover {
+        color: rgb(255, 128, 0);
+        cursor: pointer;
+    }
+}
+
+nav {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+
+    .logo {
+        width: 75px;
+        height: 75px;
+        cursor: pointer;
+        margin: 20px 100px;
+
+        @media screen and (width < 900px) {
+            margin-left: 35px;
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+    & ul {
+        list-style: none;
+        width: 100%;
+        text-align: right;
+        margin: 20px 60px;
+
+        & li {
+            display: inline-block;
+            margin: 10px 20px;
+        }
+
+        .btn-contact {
+            background-color: rgb(255, 128, 0);
+            padding: 17px;
+            border-radius: 20px;
+
+            &:hover {
+                background-color: rgb(201, 103, 4);
+                color: white;
+            }
+        }
+
+        @media screen and (width < 900px) {
+            display: none;
+            height: 50px;
+        }
+    }
+
+    #desplegable {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        width: 1.85rem;
+        height: 3rem;
+        border: none;
+        background-color: transparent;
+        gap: 7px;
+
+        &:hover > div {
+            background-color: rgb(255, 128, 0);
+        }
+
+        > div {
+            background: #ddd;
+            height: 3px;
+            width: 100%;
+            border-radius: 5px;
+            transition: all 0.5s;
+            transform-origin: left;
+        }
+
+        @media screen and (width < 900px) {
+            display: flex;
+            margin-right: 35px;
+        }
+    }
+
+    .active {
+        & div:first-child {
+            rotate: 45deg;
+        }
+
+        & div:nth-child(2) {
+            opacity: 0;
+        }
+
+        & div:last-child {
+            rotate: -45deg;
+        }
+    }
+}
+
+main {
+    width: 60%;
+    margin: 50px auto;
+
+    & h1 {
+        margin-bottom: 30px;
+        font-size: 6rem;
+        text-align: center;
+    }
+
+    & form {
+        #bloque-abajo {
+            display: flex;
+            justify-content: space-between;
+
+            > div {
+                width: 49%;
+                margin-bottom: 20px;
+
+                @media screen and (width < 900px) {
+                    width: 100%;
+                }
+            }
+
+            #informacion {
+                padding: 15px;
+                text-align: center;
+
+                & p {
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+
+                & h2 {
+                    margin-bottom: 30px;
+                    font-size: 40px;
+                }
+            }
+
+            @media screen and (width < 900px) {
+                display: block;
+            }
+        }
+
+        > div {
+            margin-bottom: 15px;
+
+            & p {
+                margin-bottom: 10px;
+            }
+
+            & input {
+                height: 30px;
+                width: 100%;
+                font-size: 22px;
+                border: none;
+                border-bottom: 1px solid rgb(255, 128, 0);
+                padding-left: 5px;
+                margin-bottom: 20px;
+
+                &:focus {
+                    outline: none;
+                    background-color: aliceblue;
+                }
+            }
+        }
+
+        #correo {
+            & input {
+                width: 100%;
+            }
+        }
+
+        #comentarios {
+            & textarea {
+                min-height: 100px;
+                width: 100%;
+                font-size: 22px;
+                border: none;
+                border-bottom: 1px solid rgb(255, 128, 0);
+                padding: 5px;
+
+                &:focus {
+                    outline: none;
+                    background-color: aliceblue;
+                }
+            }
+        }
+
+        #nombre_tel {
+            display: flex;
+            justify-content: space-between;
+
+            & div {
+                width: 49%;
+
+                @media screen and (width < 900px) {
+                    width: 100%;
+                }
+            }
+
+            @media screen and (width < 900px) {
+                flex-direction: column;
+            }
+        }
+
+        & button {
+            background-color: rgb(255, 128, 0);
+            padding: 17px;
+            border-radius: 10px;
+            border: none;
+            color: #ddd;
+            width: 200px;
+            margin-top: 30px;
+            font-size: 20px;
+
+            &:hover {
+                background-color: rgb(201, 103, 4);
+                color: white;
+            }
+
+            @media screen and (width < 900px) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: black;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    padding-right: 45px;
+    text-align: center;
+
+    #copyright {
+        @media screen and (width < 900px) {
+            width: 95%;
+            margin: 10px auto;
+        }
+    }
+
+    .logo_footer {
+        height: 20vh;
+        cursor: pointer;
+
+        @media screen and (width < 900px) {
+            margin: 5px auto;
+        }
+    }
+
+    #enlaces {
+        #begin {
+            margin-right: 25px;
+        }
+
+        @media screen and (width < 900px) {
+            width: 80%;
+            margin: 20px auto;
+        }
+    }
+
+    @media screen and (width < 900px) {
+        flex-direction: column;
+        height: auto;
+    }
+}
